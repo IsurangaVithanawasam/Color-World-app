@@ -1,14 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.dep11.MainFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane fx:id="root" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.MainFormController">
+   <children>
+      <Label layoutX="265.0" layoutY="15.0" prefHeight="19.0" prefWidth="97.0" text="Color World" textFill="#120b6f">
+         <font>
+            <Font name="Ubuntu Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="42.0" prefHeight="19.0" prefWidth="97.0" text="v 1.0.0" textFill="#120b6f">
+         <font>
+            <Font name="Ubuntu" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="61.0" prefHeight="19.0" prefWidth="321.0" text="Copyright © 2023 Isuranga. All Rights Reserved." textFill="#120b6f">
+         <font>
+            <Font name="Ubuntu" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="45.0" fitWidth="196.0" layoutX="386.0" layoutY="14.0" opacity="0.77" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../asset.img/logo-c.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="shpPreview" fill="DODGERBLUE" layoutX="143.0" layoutY="164.0" radius="122.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextField fx:id="txtColor" layoutX="104.0" layoutY="296.0" prefHeight="26.0" prefWidth="78.0" text="#1E90FF">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+      </TextField>
+      <HBox layoutX="284.0" layoutY="89.0" prefHeight="232.0" prefWidth="286.0">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="232.0" prefWidth="72.0">
+               <children>
+                  <TextField fx:id="txtRed" alignment="CENTER" editable="false" text="30">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+                  <Slider fx:id="slrRed" blockIncrement="1.0" max="255.0" orientation="VERTICAL" prefHeight="189.0" prefWidth="16.0" value="30.0" />
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="RED">
+                     <font>
+                        <Font name="Ubuntu Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="232.0" prefWidth="72.0">
+               <children>
+                  <TextField fx:id="txtGreen" alignment="CENTER" editable="false" text="145">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Slider fx:id="slrGreen" blockIncrement="1.0" max="255.0" orientation="VERTICAL" prefHeight="189.0" prefWidth="16.0" value="145.0" />
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="GREEN">
+                     <font>
+                        <Font name="Ubuntu Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" layoutX="82.0" layoutY="10.0" prefHeight="232.0" prefWidth="72.0">
+               <children>
+                  <TextField fx:id="txtBlue" alignment="CENTER" editable="false" text="255">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Slider fx:id="slrBlue" blockIncrement="1.0" max="255.0" orientation="VERTICAL" prefHeight="189.0" prefWidth="16.0" value="255.0" />
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="BLUE">
+                     <font>
+                        <Font name="Ubuntu Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" layoutX="154.0" layoutY="10.0" prefHeight="232.0" prefWidth="72.0">
+               <children>
+                  <TextField fx:id="txtAlpha" alignment="CENTER" editable="false" text="255">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Slider fx:id="slrAlpha" blockIncrement="1.0" max="255.0" orientation="VERTICAL" prefHeight="189.0" prefWidth="16.0" value="255.0" />
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="ALPHA">
+                     <font>
+                        <Font name="Ubuntu Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="114.0" layoutY="17.0" text="PREVIEW">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
